@@ -5,4 +5,4 @@ ________              __     ____   ____
 /_______  /\___  >\__|  (____  /\___/ |____/
         \/     \/\______|    \/
 
-This folder will contain all web related stuff.
+The DejaVu project.
