@@ -2,15 +2,23 @@ var dejaVuControllers = angular.module('dejaVuControllers', []);
 
 dejaVuControllers.controller('FormListController', ['$scope', 'DejaVuForm',
     function($scope, DejaVuForm) {
-        //$scope.forms = DejaVuForm.query();
-        $scope.forms = [{formId: "1", form: "i-130", applicant: {"name": "Viktor Pylypenko"}}, {formId: "2", form: "i-140", applicant: {"name": "John Doe"}}, {formId: "3", form: "i-131", applicant: {"name": "Bruce Wayne"}}];
+        $scope.forms = DejaVuForm.query();
+
+        //  TODO: Testing and development purposes. Remove once database is populated
+        if (!$scope.forms) {
+            $scope.forms = [{formId: "1", form: "i-130", applicant: {"name": "Viktor Pylypenko"}}, {formId: "2", form: "i-140", applicant: {"name": "John Doe"}}, {formId: "3", form: "i-131", applicant: {"name": "Bruce Wayne"}}];
+        }
     }
 ]);
 
 dejaVuControllers.controller('FormDetailController', ['$scope', '$routeParams', 'DejaVuForm',
     function($scope, $routeParams, DejaVuForm) {
-        //$scope.currenForm = DejaVuForm.get({formId: $routeParams.formId});
-        $scope.currenForm = {formId: "1", form: "i-130", applicant: {"name": "Viktor Pylypenko"}};
+        $scope.currentForm = DejaVuForm.get({formId: $routeParams.formId});
+
+        //  TODO: Testing and development purposes. Remove once database is populated
+        if (!$scope.currentForm) {
+            $scope.currentForm = {formId: "1", form: "i-130", applicant: {"name": "Viktor Pylypenko"}};
+        }
     }
 ]);
 
