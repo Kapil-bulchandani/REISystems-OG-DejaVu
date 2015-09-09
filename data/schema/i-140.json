@@ -1,0 +1,195 @@
+{
+  "form": "string",
+  "version": "string",
+  "uscis": {
+    "priority_date": "string",
+    "fee_paid": "boolean",
+    "consulate": "string",
+    "classification": "string",
+    "certification": "string",
+    "actions": "string",
+    "remarks": "string"
+  },
+  "petitioner": {
+    "last_name": "string",
+    "first_name": "string",
+    "middle_name": "string",
+    "company_name": "string",
+    "irs_tax_number": "number",
+    "ssn": "number",
+    "mailing_address": {
+      "in_care_of_name": "string",
+      "address": "string",
+      "address2": "string",
+      "address2_type": "string",
+      "city": "string",
+      "state": "string",
+      "zip_code": "string",
+      "postal_code": "string",
+      "province": "string",
+      "country": "string"
+    },
+    "petitioner_type": "string",
+    "petitioner_type_other_explanation": "string",
+    "company": {
+      "type_of_business": "string",
+      "established_date": "string",
+      "current_no_of_US_employees": "number",
+      "gross_annual_income": "number",
+      "net_annual_income": "number",
+      "NAICS_code": "number",
+      "DOL_ETA_case_number": "number",
+      "DOL_ETA_filing_date": "string",
+      "labor_certification_expiration_date": "string"
+    },
+    "individual": {
+      "occupation": "string",
+      "annual_income": "number"
+    },
+    "signature": "image",
+    "date_of_signature": "string",
+    "daytime_phone_number": "string",
+    "mobile_phone_number": "string",
+    "email_address": "string",
+    "job_title": "string"
+  },
+  "petition_type": {
+    "applicant_type": "string",
+    "is_amendment": "boolean",
+    "previous_petition_number": "string",
+    "for_scheduleA_group1_group2": "boolean"
+  },
+  "applicant": {
+    "last_name": "string",
+    "first_name": "string",
+    "middle_name": "string",
+    "address": {
+      "in_care_of_name": "string",
+      "address": "string",
+      "address2": "string",
+      "address2_type": "string",
+      "city": "string",
+      "state": "string",
+      "zip_code": "string",
+      "postal_code": "string",
+      "province": "string",
+      "country": "string"
+    },
+    "email_address": "string",
+    "daytime_phone_number": "string",
+    "date_of_birth": "string",
+    "city_of_birth": "string",
+    "state_of_birth": "string",
+    "country_of_birth": "string",
+    "country_of_citizenship": "string",
+    "country_of_nationality": "string",
+    "alien_number": "string",
+    "ssn": "string",
+    "arrival_date": "string",
+    "i94": "string",
+    "passport_number": "string",
+    "travel_document_number": "string",
+    "country_of_issuance_of_passport_or_travel_document": "string",
+    "expiration_date_of_passport_or_travel_document": "string",
+    "current_non_immigrant_status": "string",
+    "non_immigrant_status_expiration_date": "string"
+  },
+  "processing_information": {
+    "visa": {
+      "will_apply": "boolean",
+      "consulate_address": {
+        "city": "string",
+        "country": "string"
+      }
+    },
+    "ajustment_of_status": {
+      "will_apply": "boolean"
+    },
+    "native_spelling": {
+      "last_name": "string",
+      "first_name": "string",
+      "middle_name": "string"
+    },
+    "foreign_addres": {
+      "address": "string",
+      "address2": "string",
+      "address2_type": "string",
+      "city": "string",
+      "postal_code": "string",
+      "province": "string",
+      "country": "string"
+    },
+    "mailing_address": {
+      "address": "string",
+      "address2": "string",
+      "address2_type": "string",
+      "city": "string",
+      "postal_code": "string",
+      "province": "string",
+      "country": "string"
+    },
+    "related_forms": {
+      "i485": "boolean",
+      "i131": "boolean",
+      "i765": "boolean",
+      "other_form": "boolean"
+    },
+    "is_in_removal_proceedings": "boolean",
+    "immigrant_visa_application_ever_filed": "boolean",
+    "without_original_labor_certication": "boolean",
+    "duplicate_labor_certification_required": "boolean"
+  },
+  "proposed_employment": {
+    "job_title": "string",
+    "soc_code": "string",
+    "non_technical_description": "string",
+    "is_fulltime": "boolean",
+    "hours_per_week": "number",
+    "is_permanent": "boolean",
+    "is_new_position": "boolean",
+    "wage": "number",
+    "wage_unit": "string",
+    "work_address": {
+      "address": "string",
+      "address2": "string",
+      "address2_type": "string",
+      "city": "string",
+      "state": "string",
+      "zip_code": "string"
+    }
+  },
+  "relatives": [
+    {
+      "last_name": "string",
+      "first_name": "string",
+      "middle_name": "string",
+      "date_of_birth": "string",
+      "country_of_birth": "string",
+      "relationship": "string",
+      "applying_for_adjustment_of_status": "boolean",
+      "applying_for_visa": "boolean"
+    }
+  ],
+  "preparer": {
+    "allow_email_communication": "boolean",
+    "last_name": "string",
+    "first_name": "string",
+    "business_name": "string",
+    "daytime_phone_number": "string",
+    "daytime_phone_number_extension": "string",
+    "email_address": "string",
+    "mailing_address": {
+      "address": "string",
+      "address2": "string",
+      "address2_type": "string",
+      "city": "string",
+      "state": "string",
+      "zip_code": "string",
+      "postal_code": "string",
+      "province": "string",
+      "country": "string"
+    },
+    "signature": "image",
+    "date_of_signature": "string"
+  }
+}
