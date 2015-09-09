@@ -166,6 +166,7 @@
       "date_of_birth": "string",
       "country_of_birth": "string",
       "relationship": "string",
+      "alien_number": "string",
       "applying_for_adjustment_of_status": "boolean",
       "applying_for_visa": "boolean"
     }
