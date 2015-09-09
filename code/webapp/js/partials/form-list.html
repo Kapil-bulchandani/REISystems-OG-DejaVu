@@ -1,0 +1,26 @@
+<link rel="stylesheet" href="/css/partials/list.css">
+<h3>Form List</h3>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <form>
+                <div class="form-group">
+                    <label for="searchInput">Search Forms:</label>
+                    <input ng-model="query" type="text" class="form-control" id="searchInput" placeholder="Query">
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <ul class="form-list">
+                <li ng-repeat="form in forms | filter:query" class="thumbnail form-item">
+                    <div ng-click="details()" class="form-snippet">
+                        <a ng-href="/#/forms/{{form.formId}}">{{form.applicant.name}}</a>
+                        <span>Form Type: {{form.form}}</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
