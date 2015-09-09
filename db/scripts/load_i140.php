@@ -50,7 +50,7 @@ if ($result->num_rows > 0) {
 // generate form attributes which normally consists of form name and version
 function getFormAttributes(){
 	$row= array();
-	$row['form'] = "http://www.uscis.gov/sites/default/files/files/form/i-140.pdf";
+	$row['form'] = "i140";
 	$row['version'] = "1615-0015";
 	return $row;
 }
