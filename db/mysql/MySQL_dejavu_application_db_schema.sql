@@ -1,4 +1,8 @@
+DROP DATABASE IF EXISTS dejavu_application;
+
 CREATE DATABASE dejavu_application;
+
+USE dejavu_application;
 
 
 CREATE TABLE users (
@@ -158,6 +162,9 @@ SELECT a.ref_number, now() - INTERVAL 15 DAY , b.center_ref, c.operation_ref, d.
 FROM ref_numbers a, centers b , operations c, users d
 WHERE a.id >27 AND b.name = 'Vermont Service Center' AND c.name = 'Sent' AND d.first_name = 'user10';
 
+
+DROP USER 'appuser';
+DROP USER 'appuser'@'localhost';
 
 create user 'appuser' identified by 'password';
 create user 'appuser'@'localhost' identified by 'password';
