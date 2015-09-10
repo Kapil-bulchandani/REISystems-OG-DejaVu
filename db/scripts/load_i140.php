@@ -1,9 +1,9 @@
 <?php
 
 $servername = "localhost";
-$username = "dejavu";
-$password = "dejavu";
-$dbname = "dejavudb";
+$username = "appuser";
+$password = "password";
+$dbname = "dejavu_application";
 $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
@@ -16,34 +16,33 @@ $m = new MongoClient();
 // creating database, if its not exists it will create with the the name we are giving
 $db = $m->dejavu_mongo;
 // creating collection.
-$collection = $db->form_i140;
+$collection = $db->froms;
 
 if ($result->num_rows > 0) {
-	$json_response = array();
-	$row_array = array();
+    $json_response = array();
+    $row_array = array();
     while($row = $result->fetch_assoc()) {
-		$form = getFormAttributes();
-		$row_array['_id'] =  generateRandomNumber(15);
-		$row_array['form'] =  $form['form'];
-		$row_array['version']= $form['version'];
-		$row_array['uscis'] = uscisAttributes();
-		$row_array['applicant']  = applicantAttributes($row);
-		$row_array['petitioner'] = petitionerAttributes();
-		$row_array['relatives'][] = relativeAttributes();
-		$row_array['relatives'][] = relativeAttributes();
-		$row_array['relatives'][] = relativeAttributes();
-		array_push($json_response,$row_array);
-		 try {
-         	$collection->insert($row_array);
-		 }
-		 	catch(MongoException $e) {
-		  	print_r($e);
-		 }
-		 // unsetting the relatives array 
-		 unset($row_array['relatives']);
+        $form = getFormAttributes();
+        $row_array['_id'] =  generateRandomNumber(15);
+        $row_array['form'] =  $form['form'];
+        $row_array['version']= $form['version'];
+        $row_array['uscis'] = uscisAttributes();
+        $row_array['applicant']  = applicantAttributes($row);
+        $row_array['petitioner'] = petitionerAttributes();
+        $row_array['relatives'][] = relativeAttributes();
+        $row_array['relatives'][] = relativeAttributes();
+        $row_array['relatives'][] = relativeAttributes();
+        array_push($json_response,$row_array);
+        try {
+            $collection->insert($row_array);
+        }
+        catch(MongoException $e) {
+            print_r($e);
+        }
+        // unsetting the relatives array
+        unset($row_array['relatives']);
     }
 }
-
 
 // Functions to create random names, numbers, and attributes of the application
 
@@ -196,8 +195,8 @@ function generateRandomDate(){
 
 // Random name generation
 function generateRandomNames($name=1){
-	$names = array('Christopher','Ryan','Ethan','John','Zoey','Sarah','Michelle','Samantha');
- 	$surnames = array('Walker','Thompson','Anderson','Johnson','Tremblay','Peltier','Cunningham','Simpson','Mercado','Sellers');
+	$names = array('Christopher','Ryan','Ethan','John','Zoey','Sarah','Michelle','Samantha','Anita','Ullas','Joe','Mike','Pedda','Ayaskant','Viktor','Vikas','Malcom','Iams');
+ 	$surnames = array('Walker','Thompson','Anderson','Johnson','Tremblay','Peltier','Cunningham','Simpson','Mercado','Sellers','Kozak','Halici','Joseph','Sahu','Yadav','Gupta');
  	$random_name = $names[mt_rand(0, sizeof($names) - 1)];
  	$random_surname = $surnames[mt_rand(0, sizeof($surnames) - 1)];
  	if($name==1)
