@@ -158,7 +158,7 @@
       "zip_code": "string"
     }
   },
-  "relatives": [
+  "derivatives": [
     {
       "last_name": "string",
       "first_name": "string",
