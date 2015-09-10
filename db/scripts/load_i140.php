@@ -16,7 +16,7 @@ $m = new MongoClient();
 // creating database, if its not exists it will create with the the name we are giving
 $db = $m->dejavu_mongo;
 // creating collection.
-$collection = $db->froms;
+$collection = $db->forms;
 
 if ($result->num_rows > 0) {
     $json_response = array();
