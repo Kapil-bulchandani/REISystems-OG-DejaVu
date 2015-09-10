@@ -163,10 +163,7 @@ FROM ref_numbers a, centers b , operations c, users d
 WHERE a.id >27 AND b.name = 'Vermont Service Center' AND c.name = 'Sent' AND d.first_name = 'user10';
 
 
-DROP USER 'appuser';
-DROP USER 'appuser'@'localhost';
-
-create user 'appuser' identified by 'password';
-create user 'appuser'@'localhost' identified by 'password';
-GRANT ALL ON dejavu_application.* TO 'appuser'@'%';
-GRANT ALL ON dejavu_application.* TO 'appuser'@'localhost';
+--create user 'appuser' identified by 'password';
+--create user 'appuser'@'localhost' identified by 'password';
+GRANT ALL ON dejavu_application.* TO 'appuser'@'%' identified by 'password';
+GRANT ALL ON dejavu_application.* TO 'appuser'@'localhost' identified by 'password';
