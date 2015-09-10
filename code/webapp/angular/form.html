@@ -6,7 +6,7 @@
     <script type='text/javascript'>
 
         angular.module('myApp', [])
-                .controller('MyController', function($scope){
+                .controller('uscisController', function($scope){
                     $scope.myData = {
                         "uscisData": {
                             "1451651": [
@@ -58,7 +58,7 @@
     </script>
 </head>
 
-<body ng-controller="MyController">
+<body ng-controller="uscisController">
 <div id="banner"><img src="uscis_banner.png" width="100%"></div>
 <input type="text" ng-model="enteredValue">
 <br>
