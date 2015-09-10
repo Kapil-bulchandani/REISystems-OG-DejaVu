@@ -12,7 +12,7 @@ last_name varchar(40),
 date_of_birth varchar(40)
 );
 
-load data local infile '/home/ec2-user/MySQL/applicant_data.csv' into table immi_i140  COLUMNS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '"' ESCAPED BY '"' LINES TERMINATED BY '\n' ;
+load data local infile '/home/ec2-user/MySQL/applicant_data.csv' into table immi_i140  COLUMNS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '"' ESCAPED BY '"' LINES TERMINATED BY '\n' IGNORE 1 LINES;
 
 
 GRANT ALL ON mongodb_forms.* TO 'mongouser'@'%' identified by 'password';
